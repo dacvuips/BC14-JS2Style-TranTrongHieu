@@ -1,0 +1,14 @@
+.borderdiv {
+    border: 1px solid rgb(44, 44, 44);
+    border-radius: 3px;
+    padding: 8px 0;
+}
+
+p {
+    margin-left: 10px;
+    margin-bottom: 0 !important;
+}
+
+body {
+    background-color: rgba(0, 0, 0, 0.151) !important;
+}

@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="./style.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous" />
+</head>
+
+<body>
+    <div class="container">
+        <div class="row">
+            <!-- // BÀI 1 :TÍNH TIỀN LƯƠNG NHÂN VIÊN -->
+            <div class="col-4 mt-5">
+                <div class="card w-100 mx-auto p-3">
+                    <h5 class="card-header bg-primary text-center text-white">
+                        TÍNH TIỀN LƯƠNG NHÂN VIÊN
+                    </h5>
+                    <div class="card-body"></div>
+
+                    <div class="form-group">
+                        <label for="soNgayLam">Số ngày làm:</label>
+                        <input type="number" class="form-control" id="soNgayLam" placeholder="Nhập số ngày làm" />
+                    </div>
+
+                    <button type="button" onclick="luongNhanVien()" class="btn btn-success">
+              Tính tiền
+            </button>
+
+                    <div id="tinhTienLuong" class="text-center mt-5"></div>
+                </div>
+            </div>
+            <!-- // BAI 2 :TÍNH GIÁ TRỊ TRUNG BÌNH -->
+            <div class="col-4 mt-5">
+                <div class="card w-100 mx-auto p-3">
+                    <h5 class="card-header bg-primary text-center text-white">
+                        TÍNH GIÁ TRỊ TRUNG BÌNH
+                    </h5>
+                    <div class="card-body"></div>
+
+                    <div class="form-group">
+                        <label for="so1">Số thứ 1:</label>
+                        <input type="number" class="form-control" id="so1" placeholder="Nhập số thứ 1" />
+                    </div>
+
+                    <div class="form-group">
+                        <label for="so2">Số thứ 2:</label>
+                        <input type="number" class="form-control" id="so2" placeholder="Nhập số thứ 2" />
+                    </div>
+                    <div class="form-group">
+                        <label for="so3">Số thứ 3:</label>
+                        <input type="number" class="form-control" id="so3" placeholder="Nhập số thứ 3" />
+                    </div>
+                    <div class="form-group">
+                        <label for="so4">Số thứ 4:</label>
+                        <input type="number" class="form-control" id="so4" placeholder="Nhập số thứ 4" />
+                    </div>
+                    <div class="form-group">
+                        <label for="so5">Số thứ 5:</label>
+                        <input type="number" class="form-control" id="so5" placeholder="Nhập số thứ 5" />
+                    </div>
+
+                    <div id="showbill"></div>
+                    <button type="button" onclick="tinhTrungBinh()" class="btn btn-success">
+              Tính trung bình
+            </button>
+
+                    <div id="content__trungbinh" class="text-center mt-5"></div>
+                </div>
+            </div>
+            <!-- // BAI 3 :QUY ĐỔI RA USD -->
+            <div class="col-4 mt-5">
+                <div class="card w-100 mx-auto p-3">
+                    <h5 class="card-header bg-primary text-center text-white">
+                        QUY ĐỔI RA USD
+                    </h5>
+                    <div class="card-body"></div>
+
+                    <div class="form-group">
+                        <label for="soTienUSD">Số tiền:</label>
+                        <input type="number" class="form-control" id="soTienUSD" placeholder="Nhập số tiền" />
+                    </div>
+
+                    <button type="button" onclick="usd()" class="btn btn-success">
+              Tính tiền
+            </button>
+
+                    <div id="kqUSD" class="text-center mt-5"></div>
+                </div>
+            </div>
+            <!-- // BAI 4 :DIỆN TÍCH VÀ CHU VI HÌNH CHỮ NHẬT -->
+
+            <div class="col-4 mt-5">
+                <div class="card w-100 mx-auto p-3">
+                    <h5 class="card-header bg-primary text-center text-white">
+                        DIỆN TÍCH VÀ CHU VI HÌNH CHỮ NHẬT
+                    </h5>
+                    <div class="card-body"></div>
+
+                    <div class="form-group">
+                        <label for="chieuDai">Chiều dài:</label>
+                        <input type="number" class="form-control" id="chieudai" placeholder="Nhập chiều dài" />
+                    </div>
+
+                    <div class="form-group">
+                        <label for="chieurong">Chiều rộng:</label>
+                        <input type="number" class="form-control" id="chieurong" placeholder="Nhập chiều rộng" />
+                    </div>
+
+                    <div id="showbill"></div>
+                    <button type="button" onclick="kqChuViDienTich()" class="btn btn-success">
+              Tính nào
+            </button>
+
+                    <div id="contentChuVi" class="mt-5"></div>
+                </div>
+            </div>
+            <!-- // BÀI 5 :TÍNH TỔNG 2 KÝ SỐ -->
+
+            <div class="col-4 mt-5">
+                <div class="card w-100 mx-auto p-3">
+                    <h5 class="card-header bg-primary text-center text-white">
+                        TỔNG 2 KÝ SỐ
+                    </h5>
+                    <div class="card-body"></div>
+
+                    <div class="form-group">
+                        <label for="kySo">Nhập số:</label>
+                        <input type="number" class="form-control" id="kySo" placeholder="Nhập số 2 chữ số" />
+                    </div>
+
+                    <button type="button" onclick="tinhTong()" class="btn btn-success progress-bar-striped">
+              Tính nào
+            </button>
+
+                    <div id="kqTinhTong" class="mt-5"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="./main.js"></script>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns" crossorigin="anonymous"></script>
+</body>
+
+</html>
